@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BlogSpot</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav id="navbar" class="menu">
+        <ul>
+            <li><a class="logo active" id="review" href="#get-reviews">Get Reviews</a></li>
+            <li><a href="#homeblog" id="home" class="item">Home</a></li>
+            <li><a href="#write-your-blog" id="blog" class="item">Write your Blog</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <div id="homeBlog" class="grid-container">
+    </div>
+
+    <div id="write-your-blog" class="row">
+        <div class="leftcolumn">
+            <div class="grid-item" style="background-color:rgb(248, 248, 248);">
+                <h2>Write A Blog To Express Your Thoughts</h2>
+                <strong>Instructions:</strong>
+                <ol>
+                    <li><strong>Blog Title :</strong> Write the unique title that will make an impact on readers.</li>
+                    <li><strong>Written By:</strong> Write your name. It will be great if you have a habit of writing
+                        your email id in this
+                        field that will help your reader to get easily connect with you.
+                    </li>
+                    <li><strong> Content:</strong> Write your thoughts with proper explanation and proofs. That will
+                        create an interest in your
+                        reader to read the blog
+                    </li>
+                    <li><strong>Published By:</strong> Write your organization name.</li>
+                    <li><strong>Select image:</strong> Choose Image if you would like to add in your blog.</li>
+                    <li><strong> Create :</strong> Verify all the details and click on "Create" button that will publish
+                        your blog</li>
+                    <li><strong>Cancel:</strong> "Cancel" button will transfer you to on home page. It will erase all
+                        the contents you
+                        written. Please be careful when you are clicking on "Cancel" button.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="grid-item" style="background-color:rgb(248, 248, 248);">
+                <form name="validForm" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+                    <div id="form_page">
+                        <div id="form_body">
+                            <div id="blog-title" class="blog-input">
+                                <label for="btitle">Blog Title:</label><br>
+                                <input id="btitle_ip" type="text" Placeholder="Title" name="btitle" required>
+                            </div>
+                            <div id="blog-owner" class="blog-input">
+                                <label for="bowner">Written By:</label><br>
+                                <input id="blog-owner_ip" type="text" placeholder="Owner" name="bowner" required>
+                            </div>
+                            <div id="content" class="blog-input">
+                                <label for="content">Content:</label><br>
+                                <textarea id="content_ip" type="text" name="bcontent" required></textarea>
+                            </div>
+                            <div id="blogImage" class="blog-input">
+                                <label for="img">Select image:</label><br>
+                                <input type="file" id="img_ip" name="img" accept="image/*">
+                            </div>
+                            <div id="publisher" class="blog-input">
+                                <label for="publish">Published By:</label><br>
+                                <input id="publisher_ip" type="text" name="bpublisher" placeholder="Organization Name"
+                                    required>
+                            </div>
+                            <div class="button-container">
+                                <button id="formSubmission" class="button button2" type="submit"
+                                    value="Submit">Create</button>
+                                <button id="formreset" class="button button1" type="reset">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="blogDetails">
+        <div class="header">
+            <span class="close">&times;</span>
+            <h2 id="blogDetailsTitle">Bipul The Art of Life</h2>
+        </div>
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2 id="blogDetailsWriter">Writer's Name</h2>
+                    <h5 id="blogDetailsPublisher">Publisher's Name</h5>
+                    <img id="blogDetailsImage" class="dummyimg" alt="Image Not Found">
+                    <p id="blogDetailsContent">Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                        adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco.</p>
+                </div>
+                <div class="card write-comment" id="newComment">
+                    <form class="userCommentForm" method="post" enctype="multipart/form-data" name="validCommentInput">
+                        <div class="commenterName">
+                            <input type="text" placeholder="Name" id="name" name="userName" class="name-handle" />
+                        </div>
+                        <div id="commentImage" class="comment-input">
+                            <label for="img">Select image:</label><br>
+                            <input type="file" class="img_ci" name="img" accept="image/*">
+                        </div>
+                        <textarea id="comment" class="yourReply" name="myComment" placeholder="Your Comment.."></textarea><br>
+                        <a id="parentComments" class="commentButton">Comment</a>
+                    </form>
+                </div>
+                <div class="card read-write-comment">
+                    <h2>Comments</h2>
+                    <ul id="showComments" class="cardShowComment"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/myscripts.js"></script>
+</body>
+
+</html>

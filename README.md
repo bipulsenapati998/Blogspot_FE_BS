@@ -1,2 +1,4 @@
-# Blogspot_FE_BS
-Frontend added latest features i.e. ES5/ES6 using Vanilla JS and Node JS REST APIs as backend.
+# BlogSpot
+
+Create & blog & display it of your own.
+Add comments to that blog & the ability to do nested comments to each individual.
